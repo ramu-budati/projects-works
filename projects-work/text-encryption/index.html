@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/tripledes.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha256.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha512.js"></script>
+
+
+  <style>
+        #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background-color: #1F2833;
+    color:white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    }
+
+    #myBtn:hover {
+    background-color: #000;
+    }
+  </style>
+</head>
+<body>
+    <h2 class="mainHeading"> Text Encryption Using Various Algorithms</h2>
+    <div class="topNav">
+        <a href="#">Home</a>
+        <a href="#convert">Converters</a>
+        <!-- <a href="#">About</a> -->
+    </div>
+    
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'en')" id="defaultOpen">Encryption</button>
+        <button class="tablinks" onclick="openCity(event, 'de')">Decryption</button>
+        <button class="tablinks" onclick="openCity(event, 'key')">Key</button>
+        <button class="tablinks" onclick="openCity(event, 'necessary')">necessary</button>
+        
+      </div>
+      
+      <div id="en" class="tabcontent">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+       
+                  <p>Encryption is the process of converting or scrambling data and information into an unreadable, encoded version that can only be read with authorized access to the decryption key. Encryption is a widely used security tool that can prevent the interception of sensitive data, either while stored in files or while in transit across networks.
+                  </p>
+      </div>
+      
+      <div id="de" class="tabcontent">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+         
+                  <p>   Decryption is a Cyber Security technique that makes it more difficult for hackers to intercept and read the information they’re not allowed to do. It is transforming encrypted or encoded data or text back to its original plain format that people can easily read and understand from computer applications. This is the reverse of encryption, which requires coding data to make it unreadable for all, but only those with matching Decryption keys can read it.
+                  </p>
+              
+      </div>
+      
+      <div id="key" class="tabcontent">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        
+                  <p>A cryptographic key is a string of characters used within an encryption algorithm for altering data so that it appears random. Like a physical key, it locks (encrypts) data so that only someone with the right key can unlock (decrypt) it.         </p>
+      </div>
+      
+      <div id="necessary" class="tabcontent">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        
+                  <p><h4>Privacy:</h4> Encryption ensures that no one can read communications or data at rest except the intended recipient or the rightful data owner. This prevents attackers, ad networks, Internet service providers, and in some cases governments from intercepting and reading sensitive data.
+      
+                      <h4>Security:</h4> Encryption helps prevent data breaches, whether the data is in transit or at rest. If a corporate device is lost or stolen and its hard drive is properly encrypted, the data on that device will still be secure. Similarly, encrypted communications enable the communicating parties to exchange sensitive data without leaking the data.
+                      
+                      <h4>Data integrity:</h4> Encryption also helps prevent malicious behavior such as on-path attacks. When data is transmitted across the Internet, encryption (along with other integrity protections) ensures that what the recipient receives has not been tampered with on the way.
+                      
+                      <h4>Authentication:</h4> Public key encryption, among other things, can be used to establish that a website's owner owns the private key listed in the website's TLS certificate. This allows users of the website to be sure that they are connected to the real website (see What is public key encryption? to learn more).
+                      
+                      <h4>Regulations:</h4> For all these reasons, many industry and government regulations require companies that handle user data to keep that data encrypted. Examples of regulatory and compliance standards that require encryption include HIPAA, PCI-DSS, and the GDPR.</p>
+             
+      </div>
+
+
+
+    <!-- algorithms list  -->
+    <!-- <h2 class="algoslisthead">The following list of the algorithms are there in this platform</h2>
+    <div class="algoslist">
+        <div class="one">
+            <a href="#">ceaser_cipher</a>
+        </div>
+        <div class="two">
+            <a href="#">vigenere_Cipher</a>
+        </div>
+        <div class="three">
+            <a href="#">Railfence_Cipher</a>
+        </div>
+        <div class="four">
+            <a href="#">AES</a>
+        </div>
+        <div class="five">
+            <a href="#">DES</a>
+        </div>
+     
+        
+        
+    </div> -->
+
+    <br><br><br><br>
+<h3 class="converters" id="convert" style="color : #c5c6c7">Converters</h3>
+
+    <!-- converters  -->
+    <div class="convertersgrid">
+        <div class="encrypt">
+            <fieldset>   <legend>Encryption :</legend>  
+                <div class="encryption">
+                    <h2>Encryption</h2>
+                    <h4> Enter Plaintext</h4>
+                    <textarea name="text" id="enplaintext" cols="40" rows="5"></textarea><br>
+                    <label for="algorithms">Choose an algorithm:</label>
+    
+                    <select id="algorithms" class="enalgorithms">
+                    <option value="01">ceaser cipher</option>
+                    <option value="02">vigenere Cipher</option>
+                    <option value="03">Railfence Cipher</option>
+                    <option value="04">AES</option>
+                    <option value="05">DES</option>
+                    </select><br>
+                    
+                        <p>key : <input type="text" class="enkey" id="enkey"> </p>
+                        
+                
+                    <div class="enbtn">
+                    <input type="button" value="Encrypt" class="enbutton">
+                </div>
+                    <h4>Ciphertext</h4>
+                    <textarea name="text" id="enciphertext" cols="40" rows="5"></textarea>
+                </div>
+                </fieldset>
+        </div>
+    
+        <div class="decrypt">
+            <fieldset>   <legend>Decryption :</legend> 
+                <div class="decryption">
+                    <h2> Decryption</h2>
+                    <h4> Enter Ciphertext</h4>
+                    <textarea name="text" id="deciphertext" cols="40" rows="5"></textarea><br>
+                    <label for="algorithms">Choose an algorithm:</label>
+    
+                    <select id="algorithms" class="dealgorithms">
+                    <option value="01">ceaser cipher</option>
+                    <option value="02">vigenere Cipher</option>
+                    <option value="03"> Railfence Cipher</option>
+                    <option value="04">AES</option>
+                    <option value="05">DES</option>
+                    </select>
+                    <p>key : <input type="text" class="dekey" id="dekey"> </p>
+                    <div class="debtn">
+                    <input type="button" value="Decrypt" class="debutton">
+                </div>
+                    <h4> Plaintext</h4>
+                    <textarea name="text" id="deplaintext" cols="40" rows="5"></textarea>
+                </div>  
+            </fieldset>
+        </div>
+ 
+    </div>
+ 
+    <!-- hashing  -->
+<h3 class="hashhead">Hashing</h3>
+
+<div class="hashmain">
+    <fieldset>   <legend style="color: #c5c6c7;">Hashing :</legend> 
+    <div class="hashings">
+        <h4>Input</h4>
+         <textarea name="text" id="hashinput" cols="40" rows="5"></textarea><br>
+        <label for="hashtec" style="color: #c5c6c7;">Choose an algorithm:</label>
+        <select id="hashtec" class="hashtec">
+            <option value="01">MD5</option>
+            <option value="02">SHA-1</option>
+            <option value="03"> SHA-3</option>
+            <option value="04">SHA-256</option>
+            <option value="05">SHA-512</option>
+            </select>
+            <div class="hashbtn">
+                <input type="button" value="Generate" class="hashingbtn">
+            </div>
+            <h4> Hash of your input</h4>
+            <!-- <p id="hashoutput" style="color: #c5c6c7;">output</p> -->     
+            <textarea name="text" id="hashoutput" cols="40" rows="5"></textarea>
+
+    </div>
+</fieldset>
+</div>
+
+    <script src="index.js"></script>
+
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+    </script>
+    <!-- <script src="algorithms.js"></script> -->
+    
+
+</body>
+</html>

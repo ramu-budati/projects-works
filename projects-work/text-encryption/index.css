@@ -1,0 +1,229 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html , body
+{
+    margin:10px;
+}
+*
+{
+    font-family: poppins;
+    
+}
+
+
+body
+{
+    background:  #1F2833 ;
+    font-size: large;
+}
+.mainHeading
+{
+    text-align: center;
+    color:#66FCF1; /* ...................................................... */
+}
+a
+{
+    text-decoration: none;
+    
+    
+}
+.topNav > a
+{
+    color: #66FCF1;  /* ...................................................... */
+}
+.topNav >a:hover{
+    color:#e8f1f1;
+}
+.topNav
+{
+    display: flex;
+    justify-content: end;
+    gap :40px;
+    
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    
+    background-color: #1F2833;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: #C5C6C7;
+    color:#000000;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    margin:1rem;
+    border-radius:.5rem;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #66FCF1;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #66FCF1;
+    
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    color:#C5C6C7;
+    border:1px solid #66FCF1;
+    
+    
+  }
+
+  
+  /* Style the close button */
+  .topright {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+  }
+  
+  .topright:hover {color: red;}
+  
+  /*                  algorithms list   */
+  .algoslisthead
+  {
+      color: #c5c6c7;
+  }
+  .algoslist >div >a
+  {
+      text-decoration: none;
+      color: #66FCF1;
+      
+  }
+  .algoslist > div
+  {
+      text-align: center;
+  }
+
+/* convertes  */
+.convertersgrid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(400px , 1fr) );
+}
+/* encryption  */
+.encryption > h2 , .decryption>h2 {
+    text-align: center;
+    
+}
+.encrypt , .decrypt
+{
+   
+    margin: 2rem;
+    color: #c5c5c7;
+    display: grid;
+    place-content:center;
+   
+
+}
+.encryption , .decryption
+{
+    /* background-color:cadetblue; */
+    padding: 2rem;
+    background-color:#1F2833;
+    /* box-shadow: 0 5px 15px 0; */
+    /* border-radius: 2rem; */
+}
+
+#algorithms , #hashtec
+{
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-top: 2rem;
+}
+    
+.enbtn ,.debtn , .hashbtn{
+    margin-top: 1rem;
+    display: grid;
+    place-content:center;
+    
+}
+
+.enbutton , .debutton , .hashingbtn
+{
+    
+  padding: 0.5rem 1rem;
+  background-color: #66FCF1;
+  color:#1F2833;
+  border-radius: 0.5rem;
+  font-size: medium;
+  cursor: pointer;
+  
+  
+}
+.enbutton:hover , .debutton:hover , .hashingbtn:hover
+{
+    background-color:#ffffff;
+    color:#000000;
+}
+textarea
+{
+    outline:#66FCF1;
+    border-radius: 0.5rem;
+    background-color: #1F2833;
+    color: #C5C6C7;
+    font-size: large;
+
+}
+.enkey , .dekey
+{
+    border: 1px solid #45A29E;
+    border-radius: 0.5rem;
+    background-color: #1F2833;
+    color: #C5C6C7;
+    font-size: large;
+}
+.dealgorithms , .enalgorithms , .hashtec
+{
+    background-color: #1F2833;
+    color: #66FCF1;
+    border: 2px solid #C5C6C7;
+
+}
+
+
+/* hashing  */
+
+.hashhead
+{
+    margin-top: 3rem;
+}
+.hashhead , .hashings>h4
+{
+    color: #c5c6c7; 
+
+}
+
+.hashmain
+{
+    display: grid;
+    place-content: center;
+    padding-bottom:3rem ;
+    
+}
+
+#hashoutput
+{
+    padding-bottom: 4rem;
+}
+
+.hashings
+{
+    padding: 3rem;
+}
